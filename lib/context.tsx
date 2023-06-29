@@ -7,13 +7,17 @@ interface RouteContextState {
   path: string
   setPath(newLocation: string): void
   setRouteParams(routeParams: RouteParams): void
+  setView(view: string | null): void
+  view: string | null
 }
 
 export let RouteContext = createContext<RouteContextState>({
   params: {},
   path: location.pathname,
   setPath() {},
+  setView() {},
   setRouteParams() {},
+  view: null,
 })
 
 RouteContext.displayName = 'Router'
