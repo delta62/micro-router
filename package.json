@@ -1,5 +1,6 @@
 {
   "name": "@delta62/micro-router",
+  "description": "A tiny router for React",
   "version": "2.2.2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
