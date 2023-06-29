@@ -55,3 +55,8 @@ export let useRedirect = <Q extends QueryParams = {}>(
     setPath(args.to)
   }, [args])
 }
+
+export let useView = () => {
+  let { view } = useContext(RouteContext)
+  return view
+}
