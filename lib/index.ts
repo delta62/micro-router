@@ -9,4 +9,5 @@ export {
   useParams,
   useQueryParams,
   useRedirect,
+  useView,
 } from './hooks'
