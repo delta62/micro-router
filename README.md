@@ -70,6 +70,16 @@ coded strings or route parameters, which are prefixed with a `:`.
 /person/:name
 ```
 
+Optional components are also supported. It only makes sense to use these at the
+end of your route definition; putting them anywhere else would create a route
+that only matches when all of the optional parameters are present. Denote
+parameters as optional by prefixing them with a `?`.
+
+```
+/resource/?name
+/root/?subView/?subSection
+```
+
 Leading and trailing slashes are optional in both the route definition and the
 path given from the browser at runtime.
 
