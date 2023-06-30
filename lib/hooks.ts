@@ -11,11 +11,7 @@ export let useParams = (): RouteParams => {
 
 let searchToRecord = (search: string): QueryParams => {
   let urlParams = new URLSearchParams(search)
-  let entries = Array.from(urlParams.entries())
-  return entries.reduce<QueryParams>((acc, [k, v]) => {
-    acc[k] = v
-    return acc
-  }, {})
+  return Object.fromEntries(urlParams.entries())
 }
 
 export let useQueryParams = (): MaybeQueryParams => {
