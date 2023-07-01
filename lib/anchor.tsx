@@ -21,7 +21,7 @@ export function Anchor({
 }: PropsWithChildren<AnchorProps>) {
   let [isActive, setIsActive] = useState(false)
   let { setPath } = useContext(RouteContext)
-  let klass = `${className}${isActive ? 'active' : ''}`
+  let klass = `${className}${isActive ? ' active' : ''}`
 
   useEffect(() => setIsActive(location.pathname === href))
 
