@@ -28,13 +28,15 @@ export function Anchor({
   let onClick = useCallback(
     (event: React.MouseEvent) => {
       let params = Object.entries(query ?? {})
-      let url = new URL(href)
+      let url = new URL(href, location.origin)
 
       for (let [key, value] of params) {
         url.searchParams.append(key, `${value}`)
       }
 
-      setPath(url.toString())
+      let urlStr = `${url.pathname}${url.search}`
+
+      setPath(urlStr)
       event.preventDefault()
     },
     [query, href, setPath]
